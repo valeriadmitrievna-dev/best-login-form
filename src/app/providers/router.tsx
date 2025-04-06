@@ -8,7 +8,7 @@ import { TermsPage } from "@/pages/terms";
 
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/best-login-form/'>
       <Routes>
         <Route element={<Navigate replace to="/login" />} path="/" />
         <Route element={<LoginPage />} path="/login" />
