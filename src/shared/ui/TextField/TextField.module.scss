@@ -36,6 +36,12 @@
       box-shadow: 0 0 0 2px rgba(colors.$neutral-secondary, 0.5);
     }
 
+    &:-internal-autofill-selected {
+      transition: background-color 5000s ease-in-out 0s;
+      -webkit-text-fill-color: colors.$text-primary !important;
+      box-shadow: 0 0 0px 1000px colors.$surface-primary inset !important;
+    }
+
     &.error {
       color: colors.$error-primary;
       border-color: colors.$error-primary;
@@ -48,11 +54,15 @@
     }
 
     &.withIcon {
-      padding-left: calc(spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3);
+      padding-left: calc(
+        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
+      );
     }
 
     &.withPasswordToggle {
-      padding-right: calc(spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3);
+      padding-right: calc(
+        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
+      );
     }
   }
 
