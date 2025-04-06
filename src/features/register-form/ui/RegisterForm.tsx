@@ -18,33 +18,33 @@ const RegisterForm = () => {
   } = useRegisterForm();
 
   return (
-    <form onSubmit={submitHandler} className={styles.loginForm} autoComplete="off" noValidate>
+    <form noValidate autoComplete="off" className={styles.loginForm} onSubmit={submitHandler}>
       <TextField
+        autoFocus
+        autoComplete="off"
+        errorMessage={email.error}
+        icon={EmailIcon}
         id="email"
         label="Email Address"
-        type="email"
         name="email"
-        autoComplete="off"
+        type="email"
         value={email.value}
-        errorMessage={email.error}
         onChange={emailChangeHandler}
-        icon={EmailIcon}
-        autoFocus
       />
       <TextField
+        autoComplete="new-password"
+        errorMessage={password.error}
+        icon={PasswordIcon}
         id="password"
         label="Password"
         name="new-password"
-        autoComplete="new-password"
         type="password"
         value={password.value}
-        errorMessage={password.error}
         onChange={passwordChangeHandler}
-        icon={PasswordIcon}
       />
       <Button
-        disabled={!email.value || !password.value}
         className={styles.loginFormSubmitButton}
+        disabled={!email.value || !password.value}
         loading={isLoading}
         type="submit"
       >

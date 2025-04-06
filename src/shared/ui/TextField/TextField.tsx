@@ -7,19 +7,19 @@ import EyeIcon from "@/shared/icons/eye.svg?react";
 import EyeOffIcon from "@/shared/icons/eye-off.svg?react";
 import { useOpenedStateControl } from "@/shared/lib/hooks";
 
-interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextFieldProperties extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   errorMessage?: string | null;
   icon?: FC<SVGProps<SVGSVGElement>>;
 }
 
-const TextField: FC<TextFieldProps> = ({
+const TextField: FC<TextFieldProperties> = ({
   label,
   errorMessage,
   icon: Icon,
   type = "text",
   id,
-  ...props
+  ...properties
 }) => {
   const { isOpened: isPasswordVisible, toggle: togglePasswordVisibility } = useOpenedStateControl();
 
@@ -52,19 +52,19 @@ const TextField: FC<TextFieldProps> = ({
   return (
     <div className={styles.textField}>
       {label && (
-        <label htmlFor={id} aria-invalid={!!errorMessage} className={styles.textFieldLabel}>
+        <label aria-invalid={!!errorMessage} className={styles.textFieldLabel} htmlFor={id}>
           {label}
         </label>
       )}
       <div className={styles.textFieldInputContainer}>
         {Icon && <Icon className={styles.textFieldInputIcon} />}
-        <input {...props} type={inputType} id={id} className={textFieldInputCN} />
+        <input {...properties} className={textFieldInputCN} id={id} type={inputType} />
         {type === "password" && (
           <button
+            aria-label={isPasswordVisible ? "Hide password" : "Show password"}
+            className={styles.textFieldInputPasswordToggle}
             type="button"
             onClick={handlePasswordToggle}
-            className={styles.textFieldInputPasswordToggle}
-            aria-label={isPasswordVisible ? "Hide password" : "Show password"}
           >
             <PasswordToggleIcon className={styles.textFieldInputPasswordToggleIcon} />
           </button>

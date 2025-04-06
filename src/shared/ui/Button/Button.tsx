@@ -3,15 +3,21 @@ import cn from "classnames";
 
 import styles from "./Button.module.scss";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProperties extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ children, className, disabled, loading, ...props }) => {
+const Button: FC<ButtonProperties> = ({
+  children,
+  className,
+  disabled,
+  loading,
+  ...properties
+}) => {
   const buttonCN = cn(styles.button, { [styles.loading]: loading }, className);
 
   return (
-    <button {...props} disabled={disabled || loading} className={buttonCN}>
+    <button {...properties} className={buttonCN} disabled={disabled || loading}>
       {children}
     </button>
   );

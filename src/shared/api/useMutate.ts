@@ -14,7 +14,7 @@ const useMutate = <ResponseType, RequestType>(
   mutateFunction: (body: RequestType) => Promise<ResponseType>,
   requestDuration = 1000,
 ): UseMutateResult<ResponseType, RequestType> => {
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const timeoutReference = useRef<ReturnType<typeof setTimeout>>(null);
   const [data, setData] = useState<ResponseType | null>(null);
   const [isLoading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -30,13 +30,13 @@ const useMutate = <ResponseType, RequestType>(
         const result = await mutateFunction(body);
         setData(result);
         return result;
-      } catch (err: unknown) {
-        if (err instanceof Error) {
-          setErrorMessage(err.message);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setErrorMessage(error.message);
         } else {
           setErrorMessage("Unexpected error");
         }
-        throw err;
+        throw error;
       } finally {
         setLoading(false);
       }
@@ -49,10 +49,10 @@ const useMutate = <ResponseType, RequestType>(
       setLoading(true);
       setErrorMessage(null);
 
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      if (timeoutReference.current) clearTimeout(timeoutReference.current);
 
       return new Promise<ResponseType>((resolve, reject) => {
-        timeoutRef.current = setTimeout(async () => {
+        timeoutReference.current = setTimeout(async () => {
           try {
             const result = await handleRequest(body);
             resolve(result);

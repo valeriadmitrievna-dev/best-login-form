@@ -10,12 +10,12 @@ export const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        <Route path="/policy" element={<PolicyPage />} />
-        <Route path="/success" element={<SuccessPage />} />
+        <Route element={<Navigate replace to="/login" />} path="/" />
+        <Route element={<LoginPage />} path="/login" />
+        <Route element={<RegisterPage />} path="/register" />
+        <Route element={<TermsPage />} path="/terms" />
+        <Route element={<PolicyPage />} path="/policy" />
+        <Route element={<SuccessPage />} path="/success" />
       </Routes>
     </BrowserRouter>
   );

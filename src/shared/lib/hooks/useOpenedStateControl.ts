@@ -5,7 +5,7 @@ const useOpenedStateControl = (defaultOpened: boolean = false) => {
 
   const open = useCallback(() => setOpened(true), []);
   const close = useCallback(() => setOpened(false), []);
-  const toggle = useCallback(() => setOpened(prevState => !prevState), []);
+  const toggle = useCallback(() => setOpened(previousState => !previousState), []);
   const set = useCallback((value: boolean) => setOpened(value), []);
 
   return {

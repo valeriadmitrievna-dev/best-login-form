@@ -6,12 +6,12 @@ import { AuthLayout } from "@/shared/ui/AuthLayout";
 const RegisterPage = () => {
   return (
     <AuthLayout
-      title="Register"
       subtitle={
         <p>
           Already have an account? <Link to="/login">Login</Link>
         </p>
       }
+      title="Register"
     >
       <RegisterForm />
     </AuthLayout>

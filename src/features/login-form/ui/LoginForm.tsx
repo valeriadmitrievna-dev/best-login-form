@@ -18,31 +18,31 @@ const LoginForm = () => {
   } = useLoginForm();
 
   return (
-    <form onSubmit={submitHandler} className={styles.loginForm} noValidate autoComplete="on">
+    <form noValidate autoComplete="on" className={styles.loginForm} onSubmit={submitHandler}>
       <TextField
+        autoFocus
+        autoComplete="username"
+        icon={EmailIcon}
         id="email"
         label="Email Address"
+        name="email"
         type="email"
         value={email}
         onChange={emailChangeHandler}
-        icon={EmailIcon}
-        name="email"
-        autoComplete="username"
-        autoFocus
       />
       <TextField
+        autoComplete="current-password"
+        icon={PasswordIcon}
         id="password"
         label="Password"
         name="password"
-        autoComplete="current-password"
         type="password"
         value={password}
         onChange={passwordChangeHandler}
-        icon={PasswordIcon}
       />
       <Button
-        disabled={!email || !password}
         className={styles.loginFormSubmitButton}
+        disabled={!email || !password}
         loading={isLoading}
         type="submit"
       >
