@@ -1,0 +1,92 @@
+.textField {
+  --textfield-icon-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: spacing.$spacing-2;
+
+  &Label,
+  &ErrorMessage {
+    @include typography.body-sm;
+    text-align: left;
+  }
+
+  &ErrorMessage {
+    color: colors.$error-primary;
+  }
+
+  &Input {
+    @include typography.body-md;
+    width: 100%;
+    color: colors.$text-primary;
+    padding: spacing.$spacing-3 spacing.$spacing-4;
+    border-radius: radius.$radius-2;
+    border: 1px solid colors.$neutral-primary;
+    outline: none;
+    transition-property: box-shadow, border-color, background-color;
+    transition-duration: 200ms;
+
+    &::placeholder {
+      color: colors.$text-secondary;
+      opacity: 0.5;
+    }
+
+    &:focus {
+      border-color: colors.$neutral-bold;
+      box-shadow: 0 0 0 2px rgba(colors.$neutral-secondary, 0.5);
+    }
+
+    &.error {
+      color: colors.$error-primary;
+      border-color: colors.$error-primary;
+      background-color: rgba(colors.$error-secondary, 0.1);
+
+      &:focus {
+        border-color: colors.$error-bold;
+        box-shadow: 0 0 0 2px rgba(colors.$error-secondary, 0.5);
+      }
+    }
+
+    &.withIcon {
+      padding-left: calc(
+        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
+      );
+    }
+
+    &.withPasswordToggle {
+      padding-right: calc(
+        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
+      );
+    }
+  }
+
+  &InputContainer {
+    position: relative;
+  }
+
+  &InputIcon {
+    position: absolute;
+    left: spacing.$spacing-4;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--textfield-icon-size);
+    height: var(--textfield-icon-size);
+    color: colors.$text-secondary;
+    opacity: 0.8;
+  }
+
+  &InputPasswordToggle {
+    position: absolute;
+    right: spacing.$spacing-4;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--textfield-icon-size);
+    height: var(--textfield-icon-size);
+
+    &Icon {
+      width: 100%;
+      height: 100%;
+      color: colors.$text-secondary;
+    }
+  }
+}

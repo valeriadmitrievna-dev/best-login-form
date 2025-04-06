@@ -1,0 +1,16 @@
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: spacing.$spacing-4;
+  max-width: 400px;
+  margin: 0 auto;
+
+  &SubmitButton {
+    margin-top: spacing.$spacing-4;
+  }
+
+  &ErrorMessage {
+    @include typography.body-sm;
+    color: colors.$error-primary;
+  }
+}

@@ -1,0 +1,21 @@
+.page {
+  &Section {
+    padding: spacing.$spacing-8 spacing.$spacing-4;
+
+    &:nth-child(2n + 1) {
+      background-color: colors.$surface-secondary;
+    }
+  }
+
+  &Container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  &Content {
+    display: flex;
+    flex-direction: column;
+    gap: spacing.$spacing-4;
+  }
+}

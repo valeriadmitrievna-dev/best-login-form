@@ -1,0 +1,46 @@
+.authLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+
+  &Container {
+    text-align: center;
+  }
+
+  &Logo {
+    margin: 0 auto;
+    margin-bottom: spacing.$spacing-6;
+  }
+
+  &Title {
+    text-align: center;
+    margin: 0 auto spacing.$spacing-4;
+  }
+
+  &Subtitle {
+    text-align: center;
+    margin: spacing.$spacing-4 auto spacing.$spacing-8;
+    color: colors.$text-secondary;
+  }
+
+  &Copyright {
+    @include typography.body-sm;
+    color: colors.$text-secondary;
+    margin: spacing.$spacing-8 auto spacing.$spacing-4;
+    max-width: 460px;
+  }
+
+  &Info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: spacing.$spacing-4;
+
+    &Link {
+      @include typography.body-sm;
+      color: colors.$text-secondary;
+    }
+  }
+}

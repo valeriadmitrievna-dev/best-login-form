@@ -1,0 +1,40 @@
+@keyframes loading {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.button {
+  @include typography.body-md;
+  font-weight: 500;
+  border-radius: radius.$radius-2;
+  color: colors.$surface-primary;
+  background-color: colors.$interface-primary;
+  padding: spacing.$spacing-3 spacing.$spacing-5;
+  transition: background-color 300ms;
+
+  &:not(:disabled):hover {
+    background-color: colors.$interface-secondary;
+  }
+
+  &:not(:disabled):active {
+    background-color: colors.$interface-bold;
+  }
+
+  &:not(.loading):disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  &.loading {
+    cursor: wait;
+    animation-name: loading;
+    animation-iteration-count: infinite;
+    animation-duration: 500ms;
+    animation-timing-function:cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-direction: alternate;
+  }
+}

@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+@mixin typography($font-size, $line-height, $font-weight: 400) {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+
+@mixin h1 {
+  @include typography(60px, 110%, 600);
+}
+
+@mixin h2 {
+  @include typography(48px, 120%, 600);
+}
+
+@mixin h3 {
+  @include typography(36px, 130%, 600);
+}
+
+@mixin h4 {
+  @include typography(30px, 140%, 500);
+}
+
+@mixin h5 {
+  @include typography(24px, 140%, 500);
+}
+
+@mixin h6 {
+  @include typography(20px, 150%, 500);
+}
+
+@mixin body-sm {
+  @include typography(14px, 140%);
+}
+
+@mixin body-md {
+  @include typography(16px, 150%);
+}
+
+@mixin body-lg {
+  @include typography(18px, 150%);
+}
