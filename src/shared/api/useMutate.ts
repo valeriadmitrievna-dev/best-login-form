@@ -1,4 +1,4 @@
-import { useCallback,useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 
 import { Nullable } from "../types";
 
@@ -12,7 +12,7 @@ interface UseMutateResult<ResponseType, RequestType> {
 
 const useMutate = <ResponseType, RequestType>(
   mutateFunction: (body: RequestType) => Promise<ResponseType>,
-  requestDuration = 1000
+  requestDuration = 1000,
 ): UseMutateResult<ResponseType, RequestType> => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(null);
   const [data, setData] = useState<ResponseType | null>(null);
@@ -41,16 +41,16 @@ const useMutate = <ResponseType, RequestType>(
         setLoading(false);
       }
     },
-    [mutateFunction]
+    [mutateFunction],
   );
 
   const mutate = useCallback(
     async (body: RequestType): Promise<ResponseType> => {
       setLoading(true);
       setErrorMessage(null);
-  
+
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  
+
       return new Promise<ResponseType>((resolve, reject) => {
         timeoutRef.current = setTimeout(async () => {
           try {
@@ -62,7 +62,7 @@ const useMutate = <ResponseType, RequestType>(
         }, requestDuration);
       });
     },
-    [handleRequest, requestDuration]
+    [handleRequest, requestDuration],
   );
 
   return {

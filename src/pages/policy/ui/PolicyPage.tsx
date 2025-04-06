@@ -12,58 +12,46 @@ const PolicyPage = () => {
         <div className={styles.pageContainer}>
           <div className={styles.pageContent}>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
-              possimus, iste quisquam assumenda obcaecati earum dignissimos
-              harum qui facilis eum molestiae eaque nostrum dolorum voluptatibus
-              inventore corrupti ex impedit beatae unde quas maiores
-              exercitationem, error suscipit. Eius dolores natus, ullam nihil
-              fugit obcaecati, iusto vitae alias accusantium dolor voluptates
-              dolore!
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit possimus, iste quisquam
+              assumenda obcaecati earum dignissimos harum qui facilis eum molestiae eaque nostrum
+              dolorum voluptatibus inventore corrupti ex impedit beatae unde quas maiores
+              exercitationem, error suscipit. Eius dolores natus, ullam nihil fugit obcaecati, iusto
+              vitae alias accusantium dolor voluptates dolore!
             </p>
           </div>
         </div>

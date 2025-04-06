@@ -48,15 +48,11 @@
     }
 
     &.withIcon {
-      padding-left: calc(
-        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
-      );
+      padding-left: calc(spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3);
     }
 
     &.withPasswordToggle {
-      padding-right: calc(
-        spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3
-      );
+      padding-right: calc(spacing.$spacing-4 + var(--textfield-icon-size) + spacing.$spacing-3);
     }
   }
 

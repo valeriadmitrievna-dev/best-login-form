@@ -19,8 +19,8 @@ const SuccessPage = () => {
         <Logo />
         <h1>🎉You did it!🎉</h1>
         <p>
-          As a completely unbiased observer, I must say — adding me to your team
-          is obviously the right move 😉
+          As a completely unbiased observer, I must say — adding me to your team is obviously the
+          right move 😉
         </p>
         <Button onClick={logoutHandler}>Try again!</Button>
       </div>

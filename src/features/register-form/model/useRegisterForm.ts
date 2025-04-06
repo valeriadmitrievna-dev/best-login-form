@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { useLoginMutate } from "../api";
 
@@ -11,12 +11,7 @@ const useLoginForm = () => {
   const [email, setEmail] = useState<FormFieldState>({ value: "" });
   const [password, setPassword] = useState<FormFieldState>({ value: "" });
 
-  const {
-    register,
-    isLoading,
-    errorMessage,
-    clear: clearRegister,
-  } = useLoginMutate();
+  const { register, isLoading, errorMessage, clear: clearRegister } = useLoginMutate();
 
   const emailChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     if (errorMessage) {
@@ -45,15 +40,15 @@ const useLoginForm = () => {
 
     if (!email.value) {
       errorsCounter += 1;
-      setEmail((state) => ({ ...state, error: "Enter email" }));
+      setEmail(state => ({ ...state, error: "Enter email" }));
     } else if (!email.value.match(/^[a-zA-Z0–9. _%+-]+@[a-zA-Z0–9. -]+\.[a-zA-Z]{2,}$/)) {
       errorsCounter += 1;
-      setEmail((state) => ({ ...state, error: "Invalid email" }));
+      setEmail(state => ({ ...state, error: "Invalid email" }));
     }
 
     if (password.value.length < 6) {
       errorsCounter += 1;
-      setPassword((state) => ({ ...state, error: "Enter at least 6 symbols" }));
+      setPassword(state => ({ ...state, error: "Enter at least 6 symbols" }));
     }
 
     if (!errorsCounter) {
@@ -64,7 +59,7 @@ const useLoginForm = () => {
 
       if (token) {
         localStorage.setItem("test-login-form-token", token);
-        navigate('/success', { replace: true });
+        navigate("/success", { replace: true });
       }
     }
   };

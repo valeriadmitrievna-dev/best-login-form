@@ -1,11 +1,11 @@
-import { useCallback,useState } from "react";
+import { useCallback, useState } from "react";
 
 const useOpenedStateControl = (defaultOpened: boolean = false) => {
   const [isOpened, setOpened] = useState<boolean>(defaultOpened);
 
   const open = useCallback(() => setOpened(true), []);
   const close = useCallback(() => setOpened(false), []);
-  const toggle = useCallback(() => setOpened((prevState) => !prevState), []);
+  const toggle = useCallback(() => setOpened(prevState => !prevState), []);
   const set = useCallback((value: boolean) => setOpened(value), []);
 
   return {

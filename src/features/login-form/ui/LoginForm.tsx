@@ -18,29 +18,24 @@ const LoginForm = () => {
   } = useLoginForm();
 
   return (
-    <form
-      onSubmit={submitHandler}
-      className={styles.loginForm}
-      noValidate
-      autoComplete='on'
-    >
+    <form onSubmit={submitHandler} className={styles.loginForm} noValidate autoComplete="on">
       <TextField
-        id='email'
-        label='Email Address'
-        type='email'
+        id="email"
+        label="Email Address"
+        type="email"
         value={email}
         onChange={emailChangeHandler}
         icon={EmailIcon}
-        name='email'
-        autoComplete='username'
+        name="email"
+        autoComplete="username"
         autoFocus
       />
       <TextField
-        id='password'
-        label='Password'
-        name='password'
-        autoComplete='current-password'
-        type='password'
+        id="password"
+        label="Password"
+        name="password"
+        autoComplete="current-password"
+        type="password"
         value={password}
         onChange={passwordChangeHandler}
         icon={PasswordIcon}
@@ -49,13 +44,11 @@ const LoginForm = () => {
         disabled={!email || !password}
         className={styles.loginFormSubmitButton}
         loading={isLoading}
-        type='submit'
+        type="submit"
       >
         Log In
       </Button>
-      {errorMessage && (
-        <p className={styles.loginFormErrorMessage}>{errorMessage}</p>
-      )}
+      {errorMessage && <p className={styles.loginFormErrorMessage}>{errorMessage}</p>}
     </form>
   );
 };

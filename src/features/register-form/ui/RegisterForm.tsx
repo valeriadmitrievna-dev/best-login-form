@@ -18,18 +18,13 @@ const RegisterForm = () => {
   } = useRegisterForm();
 
   return (
-    <form
-      onSubmit={submitHandler}
-      className={styles.loginForm}
-      autoComplete='off'
-      noValidate
-    >
+    <form onSubmit={submitHandler} className={styles.loginForm} autoComplete="off" noValidate>
       <TextField
-        id='email'
-        label='Email Address'
-        type='email'
-        name='email'
-        autoComplete='off'
+        id="email"
+        label="Email Address"
+        type="email"
+        name="email"
+        autoComplete="off"
         value={email.value}
         errorMessage={email.error}
         onChange={emailChangeHandler}
@@ -37,11 +32,11 @@ const RegisterForm = () => {
         autoFocus
       />
       <TextField
-        id='password'
-        label='Password'
-        name='new-password'
-        autoComplete='new-password'
-        type='password'
+        id="password"
+        label="Password"
+        name="new-password"
+        autoComplete="new-password"
+        type="password"
         value={password.value}
         errorMessage={password.error}
         onChange={passwordChangeHandler}
@@ -51,13 +46,11 @@ const RegisterForm = () => {
         disabled={!email.value || !password.value}
         className={styles.loginFormSubmitButton}
         loading={isLoading}
-        type='submit'
+        type="submit"
       >
         Register
       </Button>
-      {errorMessage && (
-        <p className={styles.loginFormErrorMessage}>{errorMessage}</p>
-      )}
+      {errorMessage && <p className={styles.loginFormErrorMessage}>{errorMessage}</p>}
     </form>
   );
 };

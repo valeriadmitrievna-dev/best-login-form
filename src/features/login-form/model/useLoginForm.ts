@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 import { useLoginMutate } from "../api";
 
@@ -35,7 +35,7 @@ const useLoginForm = () => {
 
     if (token) {
       localStorage.setItem("test-login-form-token", token);
-      navigate('/success', { replace: true });
+      navigate("/success", { replace: true });
     }
   };
 

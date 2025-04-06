@@ -21,12 +21,11 @@ const TextField: FC<TextFieldProps> = ({
   id,
   ...props
 }) => {
-  const { isOpened: isPasswordVisible, toggle: togglePasswordVisibility } =
-    useOpenedStateControl();
+  const { isOpened: isPasswordVisible, toggle: togglePasswordVisibility } = useOpenedStateControl();
 
   const PasswordToggleIcon = useMemo(
     () => (isPasswordVisible ? EyeIcon : EyeOffIcon),
-    [isPasswordVisible]
+    [isPasswordVisible],
   );
 
   const inputType = useMemo(() => {
@@ -47,44 +46,31 @@ const TextField: FC<TextFieldProps> = ({
       event.preventDefault();
       togglePasswordVisibility();
     },
-    [togglePasswordVisibility]
+    [togglePasswordVisibility],
   );
 
   return (
     <div className={styles.textField}>
       {label && (
-        <label
-          htmlFor={id}
-          aria-invalid={!!errorMessage}
-          className={styles.textFieldLabel}
-        >
+        <label htmlFor={id} aria-invalid={!!errorMessage} className={styles.textFieldLabel}>
           {label}
         </label>
       )}
       <div className={styles.textFieldInputContainer}>
         {Icon && <Icon className={styles.textFieldInputIcon} />}
-        <input
-          {...props}
-          type={inputType}
-          id={id}
-          className={textFieldInputCN}
-        />
+        <input {...props} type={inputType} id={id} className={textFieldInputCN} />
         {type === "password" && (
           <button
-            type='button'
+            type="button"
             onClick={handlePasswordToggle}
             className={styles.textFieldInputPasswordToggle}
             aria-label={isPasswordVisible ? "Hide password" : "Show password"}
           >
-            <PasswordToggleIcon
-              className={styles.textFieldInputPasswordToggleIcon}
-            />
+            <PasswordToggleIcon className={styles.textFieldInputPasswordToggleIcon} />
           </button>
         )}
       </div>
-      {errorMessage && (
-        <p className={styles.textFieldErrorMessage}>{errorMessage}</p>
-      )}
+      {errorMessage && <p className={styles.textFieldErrorMessage}>{errorMessage}</p>}
     </div>
   );
 };
